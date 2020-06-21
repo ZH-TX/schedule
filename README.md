@@ -1,4 +1,5 @@
 # schedule
+![avatar](/src/assets/img/example1.png)
 # 一个简单的日历记事本的增删改查
 - 技术栈: vue+vue-router+vuex
 - 主要是对一些基本数据的处理
