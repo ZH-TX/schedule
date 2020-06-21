@@ -4,10 +4,24 @@
 - 主要是对一些基本数据的处理
 - 分为首页以及log记录两个页面
 - 对于一些函数的使用在conmponents组件中均有一些文字注释
-- 但是由于对于时间的数据格式有点问题,导致无法自由调整时间
+- 但是由于对于时间的数据格式有点问题,可能会导致无法自由调整时间
+
+### 日历表的数据格式说明:wlist
+```js
+{ day: 1, start: 1.5, len: 2.5, name: "任务A-301", dec: "具体事项1" },
+{ day: 1, start: 5, len: 3.5, name: "任务C-401", dec: "具体事项2" },
+{ day: 2, start: 1, len: 2, name: "任务A-501", dec: "具体事项3" },
+{ day: 2, start: 8, len: 2, name: "任务A-701", dec: "具体事项4" },
+```
+- day: 代表星期 (1-7)
+- start: 代表开始的时间, 1是默认为9:00,开始
+- len:  代表跨度时长,例1,表示为10:00
+- name: 项目名字
+- dec: 具体描述
+
 
 pop-model 组件中
-```
+```js
 <template>
     <div>
         <div class="pop-card">
@@ -53,6 +67,7 @@ npm run serve
 npm run build
 ```
 
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 问题
+1. 由于时间比较匆忙, 对于一些表单数据还未增加范围限制
+2. 增加一些交互提示,更加友好
+3. 完善一些数据逻辑
