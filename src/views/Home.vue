@@ -1,18 +1,25 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <datePicker @handleClickDay="handleClickDay" />
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import datePicker from "../components/date-picker";
 export default {
-  name: 'Home',
+  name: "date-picker",
+  data() {
+    return {
+      calendarData: []
+    };
+  },
   components: {
-    HelloWorld
+    datePicker
+  },
+  methods: {
+    handleClickDay() {}
   }
-}
+};
 </script>
+
+<style>
+</style>
+
