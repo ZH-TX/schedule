@@ -2,7 +2,7 @@
   <!--index.wxml-->
   <div class="page">
     <!-- 头部 -->
-    <input type="button" class="add" @click="add" value="填加" />
+    <input type="button" class="add" @click="add" value="添加" />
     <div class="top">
       <div v-for="(item,index) in calendarTitleArr" :key="index" class="top-text">{{item}}</div>
     </div>
